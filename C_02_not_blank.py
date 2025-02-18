@@ -12,4 +12,4 @@ def not_blank(question):
 
 # main routine starts here
 who = not_blank("Please enter your name: ")
-print(f"Hell {who}")
+print(f"Hello {who}")

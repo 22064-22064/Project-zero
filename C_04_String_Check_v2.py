@@ -1,7 +1,7 @@
 #funtions here
-def string_check(question, valid_ans_list):
+def string_check(question, valid_ans_list, num_letters):
     """Checks that users enter the full word
-    or the first letter of a word from a list of valid responses"""
+    or the 'n' letter/s of a word from a list of valid responses"""
 
     while True:
 
@@ -14,16 +14,17 @@ def string_check(question, valid_ans_list):
                 return item
             
             #check if it's the first letter
-            elif response == item[0]:
+            elif response == item[:num_letters]:
                 return item
             
         print(f"Please choose an option from {valid_ans_list}")
 
 #main routine goes here
-levels = ['easy', 'medium', 'hard']
+yes_no_list = ['yes', 'no']
+payment_list = ['cash', 'credit']
 
-like_coffee = string_check(question="Do you like coffee? ", valid_ans_list=['yes', 'no'])
+like_coffee = string_check(question="Do you like coffee? ", valid_ans_list=yes_no_list, num_letters=1)
 print(f"You chose {like_coffee}")
 
-choose_level = string_check(question="Choose a level: ", valid_ans_list=levels)
-print(f"You chose {choose_level}")
+pay_method = string_check(question="Payment method: ", valid_ans_list=payment_list, num_letters=2)
+print(f"You chose {pay_method}")

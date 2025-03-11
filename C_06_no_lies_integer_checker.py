@@ -16,7 +16,7 @@ def int_check(question):
             print(error)
 
 
-#Main routinr goes here
+#Main routine goes here
 
 
 #Loop for testing
@@ -38,4 +38,3 @@ while True:
         continue
     else:
         print(f"{name} bought a ticket")
-    
